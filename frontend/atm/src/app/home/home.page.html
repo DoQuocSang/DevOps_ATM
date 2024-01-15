@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Hệ thống ATM </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container">
+    <ion-card>
+      <img class="border-image" alt="ATM images" src="assets/atm-main.png" />
+      <div class="content">
+        <ion-card-header>
+          <ion-card-title>Chào mừng bạn đến với ứng dụng ATM</ion-card-title>
+          <ion-card-subtitle>Tài khoản: {{ userData.email }}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          Dưới đây là các chức năng của ứng dụng
+          <ion-button color="success" class="action-button" expand="block" (click)="navigateToProfilePage()">
+            <ion-icon name="person-circle-outline"></ion-icon>
+            <ion-text class="button-text">
+              Xem thông tin tài khoản
+            </ion-text>
+          </ion-button>
+          <ion-button color="warning" class="action-button" expand="block"  (click)="navigateToCameraPage()">
+            <ion-icon name="camera-outline"></ion-icon>
+            <ion-text class="button-text">
+              Chụp hình
+            </ion-text>
+          </ion-button>
+          <ion-button color="secondary" class="action-button" expand="block"  (click)="navigateToMapPage()">
+            <ion-icon name="map-outline"></ion-icon>
+            <ion-text class="button-text">
+              Xem vị trí
+            </ion-text>
+          </ion-button>
+          <ion-button color="danger" class="action-button" expand="block" (click)="navigateToLoginPage()">
+            <ion-icon name="exit-outline"></ion-icon>
+            <ion-text class="button-text">
+              Thoát
+            </ion-text>
+          </ion-button>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
